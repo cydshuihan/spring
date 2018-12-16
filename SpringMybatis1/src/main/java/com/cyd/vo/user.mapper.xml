@@ -10,4 +10,11 @@
 	<select id="selectAll" resultType="com.cyd.vo.User" >
 		select * from user 
 	</select>
+	<insert id="addUser" parameterType="User" useGeneratedKeys="true">
+		insert into user(name,pwd) values(#{name},#{pwd})
+	</insert>
+	<!-- 此处故意将delete写错，看没事务控制时的结果 -->
+	<delete id="deleteUser" >
+		deletes from user where id= #{id}
+	</delete>
 </mapper>
