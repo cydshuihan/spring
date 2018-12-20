@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.cyd.dao.UserDao;
 
 /**
- * spring整合mybatis方式三：使用注解，去掉mapper.xml文件，改为mapper接口
+ * spring整合mybatis方式四：去掉mybatis.cfg.xml配置文件，只配置beans.xml中的
  *
  */
 public class App 
