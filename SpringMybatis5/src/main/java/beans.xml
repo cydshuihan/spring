@@ -48,7 +48,8 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- <property name="configLocation" value="classpath:mybatis.cfg.xml" /> -->
-		<property name="mapperLocations" value="classpath:com/cyd/vo/user.mapper.xml" />
+		<!-- 去掉mybatis.xml配置文件后，就需要mapper.xml文件，此处要配置下mapper.xml文件的位置 ，若有多个文件，可使用通配符*-->
+		<property name="mapperLocations" value="classpath:com/cyd/vo/*.mapper.xml" />
 	</bean>
 	
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
