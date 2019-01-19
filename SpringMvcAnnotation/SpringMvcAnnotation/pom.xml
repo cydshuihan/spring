@@ -1,20 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>com.cyd</groupId>
-	<artifactId>SpringAop1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
-	<name>SpringAop1</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
-	<dependencies>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cyd</groupId>
+  <artifactId>SpringMvcAnnotation</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>SpringMvcAnnotation Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -82,6 +75,23 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.18</version>
 		</dependency>
+		<!-- 解决index.jsp报avax.servlet.http.HttpServlet" was not found on the Java -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.1.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 
 
@@ -92,15 +102,19 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<!-- 添加以下配置，解决 xml配置文件找不到的异常，即target中的class文件夹中没有该文件-->
+	<!-- 添加以下配置，解决 xml配置文件找不到的异常，即target中的class文件夹中没有该文件 -->
 	<build>
-    <resources>
-        <resource>
-            <directory>src/main/java</directory>
-            <includes>
-                <include>**/*.xml</include>
-            </includes>
-        </resource>
-    </resources>
-</build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+	<!-- 解决报Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!问题 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>
