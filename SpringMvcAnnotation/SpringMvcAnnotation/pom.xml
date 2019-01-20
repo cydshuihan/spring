@@ -104,12 +104,34 @@
 	</dependencies>
 	<!-- 添加以下配置，解决 xml配置文件找不到的异常，即target中的class文件夹中没有该文件 -->
 	<build>
+		<!-- 解决报Dynamic Web Module 3.0 requires Java 1.6 or newer. -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>
+					<include>**/*.properties</include>
 					<include>**/*.xml</include>
 				</includes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>true</filtering>
 			</resource>
 		</resources>
 	</build>
