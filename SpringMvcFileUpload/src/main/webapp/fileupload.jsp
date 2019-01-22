@@ -5,7 +5,7 @@
         <table>
             <tr>
                 <td>请选择文件：</td>
-                <td><input type="file" name="file"></td>
+                <td><input type="file" name="file"></td> <!-- 这里的file与FileUploadController请求参数的名字一直 -->
             </tr>
             <tr>
                 <td>开始上传：</td>
