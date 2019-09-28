@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="8" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringAop1 (4)" />
+        <module name="SpringAop1 (6)" />
+        <module name="SpringMvcInterceptor" />
+        <module name="SpringMvcSpringMybatis" />
+        <module name="SpringAop1 (7)" />
+        <module name="SpringMvcResponse" />
+        <module name="SpringAop1 (8)" />
+        <module name="SpringMvcDataHandler" />
+        <module name="SpringMvcHello" />
+        <module name="SpringMvcController" />
+        <module name="SpringMvcAjax" />
+        <module name="SpringMvcLoginInterceptor" />
+        <module name="SpringMvcRestful (2)" />
+        <module name="SpringMvcAnnotation" />
+        <module name="SpringAop3" />
+        <module name="SpringAop2" />
+        <module name="SpringAop1" />
+        <module name="SpringMvcRestful (1)" />
+        <module name="SpringMvcJson" />
+        <module name="SpringAop1 (5)" />
+      </profile>
+    </annotationProcessing>
   </component>
 </project>

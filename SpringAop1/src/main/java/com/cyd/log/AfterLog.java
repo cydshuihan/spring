@@ -11,6 +11,7 @@ import org.springframework.aop.AfterReturningAdvice;
  */
 public class AfterLog implements AfterReturningAdvice {
 
+	@Override
 	public void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
 		System.out.println(target.getClass().getName() + "的方法" + method.getName() + 
 				"执行成功，返回值：" + returnValue);

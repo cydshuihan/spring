@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
 	public void delete() {
 		System.out.println("删除成功");
+		throw new RuntimeException("测试后置通知能否被调用");
 	}
 
 	public void query() {
